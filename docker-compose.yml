@@ -3,7 +3,7 @@ version: "3.7"
 services:
     database:
         image: postgres
-        container_name: database_fin_api
+        container_name: database_finapi
         restart: always
         ports:
             - 5432:5432
@@ -19,10 +19,9 @@ services:
         container_name: fin_api
         restart: always
         ports:
-            - 3000:3000
-            - 9229:9229
+            - 3333:3333
         volumes:
-            - .:/usr/app
+            - .:/usr/apps
         links:
             - database
         depends_on:
